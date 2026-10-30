@@ -33,6 +33,8 @@ Status key: ✅ **verified**, which means checked through the GitHub API on 2026
 
 All three rulesets have no bypass actors, dismiss stale approvals on push, and request Copilot review on every push ✅.
 
+A fourth option was considered and not built: a **merge bot** that may bypass the rules and merges when Copilot and the path rules agree. It was dropped because the bot could merge anything, and the result is a merge, not an approval.
+
 The PRs in `approval-review-gate` have different content from the other two repos: there, B makes `list()` return the backing list, and C adds `contains()` plus a README change. The outcomes have the same shape.
 
 ## Prompt injection: instruction files on the PR branch
